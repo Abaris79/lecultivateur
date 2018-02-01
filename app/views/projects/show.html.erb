@@ -1,4 +1,4 @@
 <h1><%= @project.name %></h1>
-<p><%= link_to "Editer", edit_project_path(@project) %></p>
-<%= link_to "Tous les projets", projects_path %>
-<%= link_to "Effacer", project_path(@project), method: :delete %>
+  <p><%= link_to "Editer", edit_project_path(@project) %>
+    <%= link_to "Effacer", project_path(@project), method: :delete %></p>
+    <%= link_to "Tous les projets", projects_path %>
