@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201181618) do
+ActiveRecord::Schema.define(version: 20180201190025) do
 
   create_table "oases", force: :cascade do |t|
     t.string "name"
@@ -23,11 +23,14 @@ ActiveRecord::Schema.define(version: 20180201181618) do
   end
 
   create_table "programmes", force: :cascade do |t|
-    t.text "description"
     t.integer "duration"
     t.integer "project_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "author"
+    t.string "reference"
+    t.integer "date"
     t.index ["project_id"], name: "index_programmes_on_project_id"
   end
 
@@ -39,6 +42,8 @@ ActiveRecord::Schema.define(version: 20180201181618) do
     t.integer "cost"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "duration"
+    t.text "description"
   end
 
 end

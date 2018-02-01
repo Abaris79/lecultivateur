@@ -1,4 +1,4 @@
 class Project < ApplicationRecord
   validates :name, presence: true
-  has_one :programme, dependent: :destroy
+  has_many :programmes, dependent: :destroy
 end
