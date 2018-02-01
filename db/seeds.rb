@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 projects = Project.create([{ name: "Une histoire de flute" }, { name: "Suites avec vue"}])
+oases = Oasis.create([{ name: "Eglise Saint-Pierre", city: "Berneuil en Bray"}, { name: "Salle des Fêtes", city: "Auneuil"}])

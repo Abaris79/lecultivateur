@@ -1,0 +1,7 @@
+<h1>Vos Oasis de Culture</h1>
+
+<% @oases.each do |oasis| %>
+    <h3><%= link_to oasis.name, oase_path(oasis) %></h3>
+  <% end %>
+
+<h2><%= link_to "Dévoiler un Oasis", new_oase_path %></h2>

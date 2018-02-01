@@ -1,0 +1,11 @@
+<h2><%= @oasis.name %></h2>
+<h3><%= @oasis.city%></h3>
+<ul>
+  <li>Jauge : <%= @oasis.jauge %></li>
+  <li>Largeur de scène : <%= @oasis.stage_span %> mètres</li>
+  <li>Acoustique : <%= @oasis.acoustic %></li>
+</ul>
+  <p><%= link_to "Editer", edit_oase_path(@oasis) %>
+    <%= link_to "Effacer", oase_path(@oasis), method: :delete %></p>
+    <%= link_to "Toutes les oasis", oases_path  %>
+
