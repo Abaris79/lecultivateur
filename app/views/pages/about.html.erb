@@ -1,12 +1,13 @@
-<h1>Le Cultivateur</h1>
+
 <p>Creuser le sillon de la culture !</p>
 
 <% categories = [ 'musique', 'théâtre', 'danse', 'cirque', 'cinéma' ] %>
 
-<h2>Trouvez tous les spectacles !</h2>
+<h2><%= link_to "Trouvez tous les spectacles !", projects_path %></h2>
 
 <% categories.each do |category| %>
               <li><%= category.capitalize %></li>
 <% end %>
 
 
+<h3><%= link_to "Réferencer votre salle de spectacle", oases_path %></h3>
