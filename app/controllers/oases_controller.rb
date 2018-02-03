@@ -11,8 +11,12 @@ class OasesController < ApplicationController
     @oasis = Oasis.new
   end
   def create
-    Oasis.create(oasis_params)
-    redirect_to oases_path
+    @oasis = Oasis.create(oasis_params)
+    if @oasis.save
+      redirect_to oases_path
+    else
+      render :new
+    end
   end
   def edit
   end

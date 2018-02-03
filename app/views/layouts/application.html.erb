@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lecultivateur</title>
-    <%= csrf_meta_tags %>
+    <title><%= yield(:title_tag).blank? ? "Le Cultivateur" : yield(:title_tag) %></title>
+    <!-- Add these line for detecting device width -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render "shared/navbar" %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-    <h1><%= link_to "Le Cultivateur", about_path %></h1>
-    <!-- navbar  -->
+
+
     <%= yield %>
 
-    <p>footer</p>
+    <%= render "shared/footer" %>
   </body>
 </html>
+
+
+

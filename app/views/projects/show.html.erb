@@ -1,3 +1,7 @@
+<% content_for(:title_tag) do %>
+   <%= @project.name %> est sur Le Cultivateur
+<% end %>
+
 <h2><%= @project.name %></h2>
 
   <p><%= link_to "Editer", edit_project_path(@project) %>

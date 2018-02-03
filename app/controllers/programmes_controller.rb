@@ -14,7 +14,11 @@ class ProgrammesController < ApplicationController
     @programme = Programme.new(programme_params)
     @programme.project = @project
     @programme.save
-    redirect_to project_path(@project)
+    if @programme.save
+      redirect_to project_path(@project)
+    else
+      render :new
+    end
   end
   def edit
   end

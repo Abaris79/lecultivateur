@@ -10,8 +10,12 @@ class ProjectsController < ApplicationController
     @project = Project.new
   end
   def create
-    Project.create(project_params)
-    redirect_to projects_path
+    @project = Project.create(project_params)
+    if @project.save
+      redirect_to projects_path
+    else
+      render :new
+    end
   end
   def edit
   end
